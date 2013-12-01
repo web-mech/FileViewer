@@ -1,0 +1,25 @@
+{
+  "name": "boss-puzzle",
+  "version": "0.0.1",
+  "authors": [
+    "Mike P <webmech@gmail.com>"
+  ],
+  "description": "Michael Price, MVC App and File Viewer.",
+  "main": "./assets/js/app.js",
+  "keywords": ["mvc","markdown","file","viewer","amazing"],
+  "license": "MIT",
+  "private": true,
+  "dependencies":{
+    "canjs":"bitovi/canjs",
+    "jquery":"jquery#1.9",
+    "require":"jrburke/requirejs",
+    "moment":"momentjs#2.4.0"
+  },
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}

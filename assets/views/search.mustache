@@ -1,0 +1,12 @@
+<input type="text" placeholder="Search Documents..." class="span12"/>
+<div id="page-file-list" class="span12 well">
+	<ul>
+		{{#Page.list}}
+		<li class="link" {{data 'page'}}>{{name}}</li>
+		{{/Page.list}}
+
+		{{^Page.list}}
+	    <li>No Documents Found</li>
+	    {{/Page.list}}
+	</ul>
+</div>
