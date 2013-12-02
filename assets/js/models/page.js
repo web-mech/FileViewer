@@ -2,7 +2,7 @@
 define(['can'],function(){
 	var pageModel = can.Construct.extend({
 		postUrl:'../index.php/pages/request',
-		getUrl:'../index.php/pages/get/',
+		getUrl:'../index.php/pages/get/', 
 		init:function(){
 			this.list = new can.List([]);
 			this.current = can.compute(false);
