@@ -34,8 +34,6 @@ class FrontController implements FrontControllerInterface {
            $this->controller = $config->defaultController; //default controller set in the config file to run.
            $this->action = $config->defaultAction; //default action set in the config file to run.
            $this->parseUri();
-        }else{
-            
         }
 
         return $this;
@@ -59,10 +57,14 @@ class FrontController implements FrontControllerInterface {
         
         if (!empty($controller)) {
             $this->setController($controller);
+        }else{
+            $this->setController($this->config->defaultController);
         }
         
         if (!empty($action)) {
             $this->setAction($action);
+        }else{
+            $this->setAction($this->config->defaultAction);
         }
 
         if (!empty($params)) {

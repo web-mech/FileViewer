@@ -17,12 +17,18 @@ class Config {
 	public $basePath = ''; //relative path to your app for everything else within.
 	public $viewDir = 'views/'; //where your views are stored.
 	public $defaultLayout = 'main'; //default layout loaded.
-	public $defaultController = 'IndexController'; //default controller ran.
+	public $defaultController = 'Index'; //default controller ran.
 	public $defaultAction = 'show'; //default action taken, your controller must have this method defined.
 	public $pageDir = 'page/'; //where page content is stored.
 
 	public function __construct(){
 		$this->baseDir = dirname(__FILE__);
-		$this->basePath = substr($this->baseDir,strrpos($this->baseDir,"/"));
+		if($this->baseDir == $_SERVER['DOCUMENT_ROOT']){
+			$this->basePath = "";
+		}else{
+			$this->basePath = substr($this->baseDir,strrpos($this->baseDir,"/"));	
+		}
+			
+		
 	}
 }

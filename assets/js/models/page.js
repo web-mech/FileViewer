@@ -1,8 +1,8 @@
 //This model requests data from the server for pages.
 define(['can'],function(){
 	var pageModel = can.Construct.extend({
-		postUrl:'../page/request',
-		getUrl:'../page/get/',
+		postUrl:'../index.php/pages/request',
+		getUrl:'../index.php/pages/get/',
 		init:function(){
 			this.list = new can.List([]);
 			this.current = can.compute(false);
